@@ -17,7 +17,7 @@ describe('USER VISITS SINGLE ITEM', () => {
 		
 		it('click an item card link', () => {
 			const newItem = buildItemObject();
-			browser.url('/')
+			browser.url(`/items/${newItem._id}`)
 			browser.click('.item-card a');
 			assert.include(browser.getText('body'), itemToCreate.description);
 		});
