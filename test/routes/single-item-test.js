@@ -3,6 +3,7 @@ const request = require('supertest');
 
 const app = require('../../app');
 
+//const {parseTextFromHTML, buildItemObject} = require('../test-utils');
 const {parseTextFromHTML, seedItemToDatabase} = require('../test-utils');
 const {connectDatabaseAndDropData, diconnectDatabase} = require('../setup-teardown-utils');
 

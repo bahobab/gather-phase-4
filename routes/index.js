@@ -26,9 +26,9 @@ router.post('/items/create', async (req, res, next) => {
 router.get('/items/:itemid', async (req, res, next) => {
 	const itemId = req.params.itemid;
 	const item = await Item.findById(itemId);
-//	console.log('<<<<<>>>', item.description);
 	const html = '<div id="item-title" class="item-card"><a href="#">' + item.title + '</a></div><div id="item-description">' + item.description + '</div>'
 	res.send(html);
+	
 //	res.render('index', {
 //		title: item.title,
 //		description: item.title,
